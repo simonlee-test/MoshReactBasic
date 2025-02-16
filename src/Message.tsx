@@ -1,11 +1,13 @@
-//Component
-function Message() { 
-    //JSX: JS + XML only accept HTML code and react components
-    const name = '';
-    if (name) {
-        return <h1>Hello {name}</h1>;
-    }
-    return <h1>Hello World</h1>;
+function Message(){
+    let name: string = 'Simon';
+    let age: number = 24;
+    const greetings: string = Greet(name, age);
+    return <h1>{greetings}</h1>
 }
 
-export default Message;
+export function Greet(name: string, age: number): string{
+    return `Hi! Your name is ${name} and you are ${age} years old!`
+}
+
+// export default {Message, Greet}
+export default Message

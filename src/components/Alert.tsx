@@ -1,10 +1,11 @@
 import { ReactNode } from "react";
 
-interface Props {
-  children: ReactNode;
-  onClose: () => void;
+interface Props{
+  children: ReactNode; //to pass html content
+  onClose: () =>void;
 }
-const Alert = ({ children, onClose}: Props) => {
+
+const Alert = ({children, onClose}:Props) => {
   return (
     <div className="alert alert-primary alert-dismissible">
       {children}
